@@ -16,5 +16,5 @@ const contacShema = new Schema({
     default: false,
   },
 });
-const Contact = model("contact", contacShema);
+const Contact = model("contacts", contacShema);
 module.exports = Contact;
