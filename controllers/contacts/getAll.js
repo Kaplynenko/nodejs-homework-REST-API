@@ -3,6 +3,7 @@ const Contact = require("../../models/contact");
 
 const getAll = async (req, res) => {
   const { _id: owner } = req.user;
+  const { ...query } = req.query;
   const result = await Contact.find({ owner, ...query });
   res.json(result);
 };
